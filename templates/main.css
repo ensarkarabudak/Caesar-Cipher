@@ -1,0 +1,371 @@
+
+
+/*     <!-- Ensar Karabudak Tarafından Hazırlanmıştır. ensarkarabudak.com  -->  */
+
+
+html,body,#cover{
+  height: 100%;
+}
+#cover{
+
+  background: url('../images/gakko-theme-background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.fixed-top{
+  max-width: 1140px;
+  margin: 10px auto;
+  transition: 0.4s all linear;
+}
+/*     <!-- Ensar Karabudak Tarafından Hazırlanmıştır. ensarkarabudak.com  -->  */
+.fixed-top.change-fix-top{
+  margin-top: 0;
+  background-color: #e6ac00;
+    max-width: 2000px;
+}
+
+#cover h2{
+  margin-top: 15%;
+    margin-bottom: 3%;
+  font-family: 'Anton', sans-serif;
+  color: white;
+font-size: 45px;
+
+}
+#cover h1{
+  font-family: 'Open Sans Condensed', sans-serif;
+color: white;
+  font-size: 80px;
+margin-bottom: 5%;
+font-weight: 700;
+}
+
+.btn-primary{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 15px 60px;
+  background-color: #fed136;
+  border-style: none;
+  text-transform: uppercase;
+}
+.btn-primary:hover{
+background-color: white;
+color: #fed136;
+}
+.btn-primary:active{
+  border-color: #fed136;
+}
+
+#cover a.nav-link{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+#cover a.nav-link:hover{
+  color: #fed136;
+  transition: color 0.5s ease;
+-webkit-transition: color 0.5s ease;
+-moz-transition: color 0.5s ease;
+-o-transition: color 0.5s ease;
+}
+
+.two-top{
+  margin: auto 0 ;
+}
+
+
+
+/**  TWO  **/
+
+#two{
+  padding:90px 0px;
+}
+.two-top{
+  margin-bottom:5%;
+}
+.two-top h3{
+  font-weight: 700;
+  font-size: 40px;
+}
+.two-top p, .three-top p, .four-top p,.team-top p{
+  font-size: 20px;
+  font-style: italic;
+}
+.items{
+  border: 3px solid #fed136;
+  width: 100px;
+  height: 100px;
+  margin:0 auto;
+  border-radius: 200px;
+}
+.two-container i{
+  color:#fed136;
+  line-height: 90px;
+    margin:0 auto;
+}
+
+.two-container h4{
+margin-top: 7%;
+font-size: 25px;
+font-weight: bold;
+color: #222;
+}
+
+.two-container p{
+font-size: 12px;
+color: #777;
+}
+
+#three {
+  background-color: #f7f7f7;
+  padding:90px 0px;
+
+}
+
+.three-top h3, .four-top h3, .team-top h3{
+  font-weight: 700;
+  font-size: 40px;
+}
+.three-top , .four-top, .team-top , .iletisim-top {
+  margin-bottom: 5%;
+}
+
+.three-content .row{
+
+  margin-bottom: 5%;
+}
+.three-content .card-title{
+  font-weight: 700;
+  font-size: 30px;
+}
+#four{
+  padding-top: 120px;
+}
+
+.four-content .row{
+  margin-bottom: 90px;
+}
+.four-content {
+  position:relative;
+}
+.four-content:before{
+  top:0;
+  bottom: 0;
+  position:absolute;
+  content: " ";
+  width: 4px;
+  background-color: #f1f1f1;
+  left: 50%;
+  margin-left: -2px;
+
+}
+.four-circle{
+  position: relative;
+
+}
+.four-circle:before{
+  top:0;
+  bottom: 0;
+  position:absolute;
+  content: " ";
+  width: 170px;
+  height: 170px;
+  background-color: red;
+  border-radius: 170px;
+  border: 4px solid #f1f1f1;
+  left: 50%;
+  margin-left: -78.5px;
+}
+.four-text{
+  position: relative;
+  padding-top: 50px;
+  padding-left: 10px;
+}
+
+#team{
+  background-color: #f9f9f9;
+ padding-top: 80px;
+ padding-bottom: 80px;
+}
+.team-circle{
+  height: 220px;
+  width: 220px;
+  background-color: black;
+  border-radius: 220px;
+  margin:0 auto;
+  border: 5px solid red;
+  margin-bottom: 25px;
+}
+.team-content h3{
+  font-family: 'Montserrat' ,serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.team-content h5{
+  font-family: 'Roboto Slap' ,serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+/*     <!-- Ensar Karabudak Tarafından Hazırlanmıştır. ensarkarabudak.com  -->  */
+.unordered{
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.unordered-li{
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.unordered .fa{
+  border: 2px solid #000;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  padding-top: 2px;
+}
+.team-content-p{
+  margin: 80px auto;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#destek{
+  padding: 80px 0;
+}
+
+#iletisim{
+  padding-top: 120px;
+  padding-bottom: 120px;
+    background: url('../images/contact-us.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+.iletisim-top p{
+   font-size: 20px;
+   font-style: italic;
+   color: white;
+ }
+ .iletisim-top h3{
+   font-weight: 700;
+   font-size: 40px;
+   color: white;
+ }
+
+ #name,#email,#konu{
+   border-style: none;
+   border-radius:4px;
+   width: 90%;
+   height: 55px;
+   padding-left: 20px;
+   margin-bottom: 7%;
+   margin-left: 5%;
+ }
+ textarea{
+   width: 90%;
+   height: 240px;
+   border-style: none;
+   border-radius:4px;
+   padding-top: 25px;
+   padding-left: 25px;
+      margin-left: 5%;
+ }
+ .iletisim-formu-eleman{
+   font-family: 'Montserrat' ,serif;
+   font-size:20px;
+   font-weight: 700;
+ }
+#footer{
+  padding:20px 0;
+}
+.social{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*   ensarkarabudak.com    */
+.icon{
+    display: inline;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+}
+#footer p{
+  font-size: 14px;
+  color:#555555;
+  font-weight: 400;
+  line-height: 40px;
+}
+.icon .fa{
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 40px;
+  line-height: 40px;
+}
+
+/****** MEDIA SORGULARI ******/
+
+
+
+@media (max-width: 575px) {
+  .navbar-collapse{
+    background-color: rgba(0,0,0,0.3);
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  #cover h2{
+    margin-top: 18%;
+      margin-bottom: 5%;
+    color: white;
+  font-size: 30px;
+
+  }
+  #cover h1{
+
+    font-size: 65px;
+  margin-bottom: 8%;
+  font-weight: 700;
+  }
+
+
+
+
+
+  .icon .fa{
+    width: 35px;
+    height:35px;
+    border-radius: 35px;
+    line-height:35px;
+  }
+
+  .icon{
+      padding-left: 6px;
+      padding-right: 6px;
+  }
+
+  #footer p{
+    font-size:10px;
+    line-height: 35px;
+  }
+
+}
+
+
+@media (max-width: 991px) {
+
+
+
+}
