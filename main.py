@@ -4,12 +4,17 @@ import json
 
 app = Flask(__name__)
 
-@app.route("/", methods=['POST','GET'])
+@app.route("/")
 def index():
-	if request.method=='POST':
-		return render_template('url.html',cevap=cevap)  
-	else:
 		return render_template('index.html')
+
+@app.route("/sifrele")
+def sifrele():
+        return render_template('sifrele.html')
+
+@app.route("/desifrele")
+def desifrele():
+    return render_template('desifre.html')
 
 if __name__ == "__main__":
     app.run()
