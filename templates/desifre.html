@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deşifre</title>
+    <title>Deşifrele</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/aa.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/A.css') }}">
 
 </head>
 <body>
  <div class="container">
-        <div class="row">
-            <div class="col-sm">  
+        <div class="row mt-5">
+            <div class="col-sm mt-5">
                     <form method="POST" action="">
 						<div class="input-group">
                             <div class="input-group input-group-lg">
@@ -20,12 +20,18 @@
                                     <span class="input-group-text" id="inputGroup-sizing-lg">Metin</span>
                                 </div>
                                     <input type="text" class="form-control" name="message" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                                    <input  type="text" name="anahtar"  class="form-control form-group" placeholder="Anahtar" required autofocus>
-                                    <button class="btn btn-lg btn-success btn-block btn-signin" name="submit" type="submit">Şifrele</button>
+                                    <input  type="number" min="0" name="anahtar"  class="form-control form-group" placeholder="Anahtar" required autofocus>
                             </div>
+                            <div class="text-center mx-auto">
+                              <button class="btn btn-lg btn-success mt-4 " name="submit" type="submit">ÇÖZ</button>
+                              <a class="btn btn-lg btn-info mt-4 ml-3 " href="{{ url_for('index') }}" role="button">Ana Sayfa</a>
+                            </div>
+
 						</div>
-                    </form> 
-                     <p>{{ cozulmus_metin }}</p>		
+                    </form>
+                    <blockquote class="blockquote text-center mt-4">
+                        <p class="mb-0">{{  cozulmus_metin }}</p>
+                    </blockquote>
                 </div>
             </div>
         </div>
@@ -35,3 +41,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </body>
 </html>
+<!-- ENSAR KARABUDAK - github.com/ensarkarabudak */-->  

@@ -65,10 +65,14 @@ def desifrele():
         if request.method == 'POST':
             sifreli_metin = request.form['message']
             anahtar = request.form['anahtar']
-            cozulmus_metin=''
             for i in sifreli_metin:
                     cozulmus_metin += cozlan(i,int(anahtar))
         return render_template('desifre.html',  cozulmus_metin=cozulmus_metin)
 
 if __name__ == "__main__":
     app.run()
+
+"""
+ENSAR KARABUDAK - github.com/ensarkarabudak   
+
+"""

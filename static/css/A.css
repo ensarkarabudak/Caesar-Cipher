@@ -1,0 +1,23 @@
+html,body{
+  height: 100%;
+}
+
+h3{
+  margin-top: 20%;
+}
+.buton-light{
+  font-size: 20px;
+  padding: 15px 35px;
+  background-color: #fed136;
+  border-style: none;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+.buton-dark{
+  font-size: 20px;
+  padding: 15px 20px;
+  border-style: none;
+  text-transform: uppercase;
+}
+
+/* ENSAR KARABUDAK - github.com/ensarkarabudak */
