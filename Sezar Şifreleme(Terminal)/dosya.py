@@ -13,7 +13,7 @@ def desifrele(karakter):
                 sayi -= 26
             elif sayi < ord('a'):    
                 sayi += 26
-        print(chr(sayi))
+        dosya_yaz(chr(sayi))
     else:
         pass
 
@@ -36,31 +36,29 @@ def sifrele(karakter):
         pass
 
 def dosya_yaz(sifreli_karakter):
-    with open("sifreli_dosya.txt","a+") as f:
+    with open("sonuc.txt","a+") as f:
         f.writelines(sifreli_karakter)
 try:
-    while True:
+    print('Lutfen Seçim Yapınız:\n 1 - Şifrele \n 2 - Deşifrele')
+    sec=int(input())
+    if sec == 1:
         print('Lufen bir anahtar girin(1-26):')
         anahtar=int(input())
         if(anahtar>0 and anahtar<=26):
-            with open("sifrele.txt","r+") as dosya:
+            with open("metin.txt","r+") as dosya:
                 tut=dosya.readlines()
                 for symbol in tut:
                     for i in symbol:
-                        sifrele(i) 
-            break
-     
-        else:
-            print('LUTFEN 1-29 ARASINDA BIR SAYI GIRIN')
-
-    while True:
+                        sifrele(i)
+    elif sec == 2:
         print('Anahtar Gir:')
         coz=int(input())
-        with open("sifreli_dosya.txt","r+") as dosya:
+        with open("metin.txt","r+") as dosya:
             tut=dosya.readlines()
             for symbol in tut:
                 for i in symbol:
                     desifrele(i)
-        break
+    else:
+        print("Lutfen 1 veya 2 seçeneklerinden birini seçiniz!")
 except ValueError:
     print("Lutfen sayı giriniz")
