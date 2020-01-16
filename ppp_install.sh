@@ -147,7 +147,7 @@ while [ 1 ]
 do
 	
 	#read auto_reconnect == $4
-	case $4
+	echo $4
 	case $4 in
 		Yes)    echo "${YELLOW}Downloading setup file${SET}"
 			  
@@ -189,7 +189,7 @@ do
 			  
 		No)    echo "${YELLOW}To connect to internet run ${BLUE}\"sudo pon\"${YELLOW} and to disconnect run ${BLUE}\"sudo poff\" ${SET}"
 			  break;;
-		*)   case $4 echo "${RED}Wrong Selection, Select among Y or n${SET}";;
+		*)   echo $4 ;;
 	esac
 done
 
