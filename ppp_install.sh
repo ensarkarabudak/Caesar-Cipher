@@ -145,7 +145,7 @@ fi
 
 while [ 1 ]
 do
-	echo "${YELLOW}Do you want to activate auto connect/reconnect service at R.Pi boot up? [Y/n] ${SET}"
+	
 	#read auto_reconnect == $4
 
 	case $4 in
