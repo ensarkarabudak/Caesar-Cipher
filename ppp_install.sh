@@ -187,7 +187,7 @@ do
 			  
 			  break;;
 			  
-		[Nn]* )    echo "${YELLOW}To connect to internet run ${BLUE}\"sudo pon\"${YELLOW} and to disconnect run ${BLUE}\"sudo poff\" ${SET}"
+		No )    echo "${YELLOW}To connect to internet run ${BLUE}\"sudo pon\"${YELLOW} and to disconnect run ${BLUE}\"sudo poff\" ${SET}"
 			  break;;
 		*)   echo "${RED}Wrong Selection, Select among Y or n${SET}";;
 	esac
