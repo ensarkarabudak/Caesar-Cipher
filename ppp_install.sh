@@ -9,6 +9,8 @@ SET='\033[0m'
 # shield_hat == $1
 
 # read shield_hat
+echo $1
+: '
 case $1 in
     1)    echo "${YELLOW}You chose GSM/GPRS Shield${SET}";;
     2)    echo "${YELLOW}You chose Base Shield${SET}";;
@@ -18,6 +20,7 @@ case $1 in
 	6)    echo "${YELLOW}You chose 3G/4G Base HAT${SET}";;		
     *)    echo "${RED}Wrong Selection, exiting${SET}"; exit 1;
 esac
+'
 
 : '
 if [ $shield_hat -eq 3 ] || [ $shield_hat -eq 4 ];	then
