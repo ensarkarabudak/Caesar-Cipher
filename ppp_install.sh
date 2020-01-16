@@ -149,7 +149,7 @@ do
 	#read auto_reconnect == $4
 
 	case $4 in
-		Yes )    echo "${YELLOW}Downloading setup file${SET}"
+		"Yes" )    echo "${YELLOW}Downloading setup file${SET}"
 			  
 			wget --no-check-certificate https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_service -O reconnect.service
 			  
@@ -187,7 +187,7 @@ do
 			  
 			  break;;
 			  
-		No )    echo "${YELLOW}To connect to internet run ${BLUE}\"sudo pon\"${YELLOW} and to disconnect run ${BLUE}\"sudo poff\" ${SET}"
+		"No" )    echo "${YELLOW}To connect to internet run ${BLUE}\"sudo pon\"${YELLOW} and to disconnect run ${BLUE}\"sudo poff\" ${SET}"
 			  break;;
 		*)   echo "${RED}Wrong Selection, Select among Y or n${SET}";;
 	esac
