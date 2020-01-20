@@ -23,7 +23,7 @@ case $5 in
 			EXTRA='OK AT+QCFG="band",F,400A0E189F,A0E189F,1\nOK AT+QCFG="nwscanseq",02,1\nOK AT+QCFG="nwscanmode",3,1\nOK AT+QCFG="iotopmode",0,1';;
 	NB-IoT)    echo "${YELLOW}You chose NB-IoT${SET}"
 			EXTRA='OK AT+QCFG="band",F,400A0E189F,A0E189F,1\nOK AT+QCFG="nwscanseq",03,1\nOK AT+QCFG="nwscanmode",3,1\nOK AT+QCFG="iotopmode",1,1';;
-	*) 	  echo "{RED}Wrong Selection, exiting${SET}"; exit 1;
+	*) 	  echo "{RED}Wrong Selection, exiting${SET}";
 esac
 
 
@@ -65,7 +65,7 @@ echo "${YELLOW}What is your device communication PORT? (ttyS0/ttyUSB3/etc.)${SET
 
 mkdir -p /etc/chatscripts
 
-if [ $1 -eq "CellularIoT Shield" ] || [ $1 -eq "CellularIoT HAT" ]; then
+if [ $1 -eq 3 ] || [ $1 -eq 4 ]; then
   sed -i "s/#EXTRA/$EXTRA/" chat-connect
 else
   sed -i "/#EXTRA/d" chat-connect
@@ -86,7 +86,7 @@ if ! (grep -q 'sudo route' /etc/ppp/ip-up ); then
 fi
 
 
-if [ $1 -eq "Base Shield" ]; then
+if [ $1 -eq 2 ]; then
 	if ! (grep -q 'max_usb_current' /boot/config.txt ); then
 		echo "max_usb_current=1" >> /boot/config.txt
 	fi
@@ -100,32 +100,32 @@ case $4 in
     Yes)    echo "${YELLOW}Downloading setup file${SET}"
         
         wget --no-check-certificate https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_service -O reconnect.service
-        
-        if [ $1 -eq "GSM/GPRS Shield" ]; then
-        
-            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_gprsshield -O reconnect.sh
-        
-        elif [ $1 -eq "Base Shield" ]; then 
-        
-            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_baseshield -O reconnect.sh
-            
-        elif [ $1 -eq "CellularIoT Shield" ]; then 
-        
-            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot_app -O reconnect.sh
-        
-        elif [ $1 -eq "CellularIoT HAT" ]; then 
-        
-            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot -O reconnect.sh
-        
-        elif [ $1 -eq "Tracker HAT" ]; then 
-        
-            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_tracker -O reconnect.sh
 
-        elif [ $1 -eq "3G/4G Base HAT" ]; then 
-        
-            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_basehat -O reconnect.sh
+		if [ $1 -eq 1 ]; then
+			
+			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_gprsshield -O reconnect.sh
+			
+		elif [ $1 -eq 2 ]; then 
+			
+			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_baseshield -O reconnect.sh
+			
+		elif [ $1 -eq 3 ]; then 
+			
+			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot_app -O reconnect.sh
+			
+		elif [ $1 -eq 4 ]; then 
+			
+			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot -O reconnect.sh
+		
+		elif [ $1 -eq 5 ]; then 
+			
+			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_tracker -O reconnect.sh
 
-        fi
+		elif [ $1 -eq 6 ]; then 
+			
+			wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_basehat -O reconnect.sh
+
+		fi
         
         mv reconnect.sh /usr/src/
         mv reconnect.service /etc/systemd/system/
