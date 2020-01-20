@@ -143,55 +143,54 @@ if [ $1 -eq 2 ]; then
 	fi
 fi
 
-while [ 1 ]
-do
+
 	
-	#read auto_reconnect == $4
-	echo $4
-	case $4 in
-		Yes)    echo "${YELLOW}Downloading setup file${SET}"
-			  
-			wget --no-check-certificate https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_service -O reconnect.service
-			  
-			if [ $1 -eq 1 ]; then
-			  
-				wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_gprsshield -O reconnect.sh
-			  
-			elif [ $1 -eq 2 ]; then 
-			  
-				wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_baseshield -O reconnect.sh
-				
-			elif [ $1 -eq 3 ]; then 
-			  
-				wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot_app -O reconnect.sh
-			  
-			elif [ $1 -eq 4 ]; then 
-			  
-				wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot -O reconnect.sh
-			
-			elif [ $1 -eq 5 ]; then 
-			  
-				wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_tracker -O reconnect.sh
+#read auto_reconnect == $4
+echo $4
+case $4 in
+    Yes)    echo "${YELLOW}Downloading setup file${SET}"
+        
+        wget --no-check-certificate https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_service -O reconnect.service
+        
+        if [ $1 -eq 1 ]; then
+        
+            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_gprsshield -O reconnect.sh
+        
+        elif [ $1 -eq 2 ]; then 
+        
+            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_baseshield -O reconnect.sh
+            
+        elif [ $1 -eq 3 ]; then 
+        
+            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot_app -O reconnect.sh
+        
+        elif [ $1 -eq 4 ]; then 
+        
+            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_cellulariot -O reconnect.sh
+        
+        elif [ $1 -eq 5 ]; then 
+        
+            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_tracker -O reconnect.sh
 
-			elif [ $1 -eq 6 ]; then 
-			  
-				wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_basehat -O reconnect.sh
+        elif [ $1 -eq 6 ]; then 
+        
+            wget --no-check-certificate  https://raw.githubusercontent.com/sixfab/Sixfab_PPP_Installer/master/ppp_installer/reconnect_basehat -O reconnect.sh
 
-			  fi
-			  
-			  mv reconnect.sh /usr/src/
-			  mv reconnect.service /etc/systemd/system/
-			  
-			  systemctl daemon-reload
-			  systemctl enable reconnect.service
-			  
-			  break;;
-			  
-		No)    echo "${YELLOW}To connect to internet run ${BLUE}\"sudo pon\"${YELLOW} and to disconnect run ${BLUE}\"sudo poff\" ${SET}"
-			  break;;
-		*)   echo $4 ;;
-	esac
-done
+        fi
+        
+        mv reconnect.sh /usr/src/
+        mv reconnect.service /etc/systemd/system/
+        
+        systemctl daemon-reload
+        systemctl enable reconnect.service
+        
+        break;;
+        
+    No)    echo "${YELLOW}To connect to internet run ${BLUE}\"sudo pon\"${YELLOW} and to disconnect run ${BLUE}\"sudo poff\" ${SET}"
+        break;;
+    *)   echo $4 ;;
+esac
+
 
 
 reboot
