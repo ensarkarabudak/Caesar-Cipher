@@ -10,6 +10,9 @@ SET='\033[0m'
 
 # read shield_hat
 echo $1
+echo $2
+echo $3
+echo $4
 : '
 case $1 in
     1)    echo "${YELLOW}You chose GSM/GPRS Shield${SET}";;
@@ -117,7 +120,7 @@ done
 echo "${YELLOW}What is your device communication PORT? (ttyS0/ttyUSB3/etc.)${SET}"
 # read devicename 
 # devicename == $3
-echo $4
+
 mkdir -p /etc/chatscripts
 if [ $1 -eq 3 ] || [ $1 -eq 4 ]; then
   sed -i "s/#EXTRA/$EXTRA/" chat-connect
@@ -147,7 +150,7 @@ fi
 
 	
 #read auto_reconnect == $4
-echo $4
+
 case $4 in
     Yes)    echo "${YELLOW}Downloading setup file${SET}"
         
