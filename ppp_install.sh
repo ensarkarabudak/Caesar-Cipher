@@ -117,6 +117,7 @@ done
 echo "${YELLOW}What is your device communication PORT? (ttyS0/ttyUSB3/etc.)${SET}"
 # read devicename 
 # devicename == $3
+echo $4
 mkdir -p /etc/chatscripts
 if [ $1 -eq 3 ] || [ $1 -eq 4 ]; then
   sed -i "s/#EXTRA/$EXTRA/" chat-connect
@@ -193,4 +194,3 @@ esac
 
 
 
-reboot
