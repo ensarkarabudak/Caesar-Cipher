@@ -141,4 +141,5 @@ case $4 in
 esac
 
 
+reboot
 
