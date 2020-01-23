@@ -50,7 +50,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "${YELLOW}ppp install${SET}"
-apt-get install ppp
+apt-get install ppp -y
 
 echo "${YELLOW}What is your carrier APN?${SET}"
 
